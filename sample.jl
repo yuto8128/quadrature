@@ -1,3 +1,5 @@
+import Pkg
+Pkg.activate(".")
 using FastGaussQuadrature, LinearAlgebra
 using Plots
 
@@ -18,4 +20,6 @@ end
 
 gr()
 p = plot(x_list,err_list,st=:scatter,yscale=:log10)
-savefig(p, "sample.pdf")
+display(p)
+gui()
+savefig(p, "hogehoge.pdf")
